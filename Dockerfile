@@ -6,4 +6,4 @@ RUN mkdir dest
 
 RUN pip install --verbose -r requirements.txt
 
-CMD [ "python", "./watch_for_changes.py", "/xmls" ]
+CMD [ "python", "watch_for_changes.py", "xmls" ]
