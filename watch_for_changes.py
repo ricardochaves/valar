@@ -10,7 +10,7 @@ class MyHandler(PatternMatchingEventHandler):
     patterns = ["*.xml", "*.lxml"]
 
     def process(self, event):
-        """
+        """ 
         event.event_type 
             'modified' | 'created' | 'moved' | 'deleted'
         event.is_directory
@@ -25,7 +25,7 @@ class MyHandler(PatternMatchingEventHandler):
         diretorio_destino = '/home/ricardo/projects/valar/xmls/dest/' + str(uu) + '/'
         print('diretorio_destino: ' + diretorio_destino)
         os.makedirs(diretorio_destino)
-        dest1 = diretorio_destino + event.src_path.split('/')[6]
+        dest1 = diretorio_destino + event.src_path.split('/')[1]
         print('dest1: ' + dest1)
         des = shutil.move(event.src_path, dest1)
         print('des: ' + des)
@@ -47,7 +47,6 @@ if __name__ == '__main__':
     try:
         while True:
             time.sleep(1)
-            print('sleep')
     except KeyboardInterrupt:
         observer.stop()
 
