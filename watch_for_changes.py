@@ -22,7 +22,7 @@ class MyHandler(PatternMatchingEventHandler):
         print(event.src_path, event.event_type)  # print now only for degug
         uu = uuid.uuid4()
         print(uu)
-        diretorio_destino = '/home/ricardo/projects/valar/xmls/dest/' + str(uu) + '/'
+        diretorio_destino = '/dest/' + str(uu) + '/'
         print('diretorio_destino: ' + diretorio_destino)
         os.makedirs(diretorio_destino)
         dest1 = diretorio_destino + event.src_path.split('/')[1]

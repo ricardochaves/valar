@@ -4,3 +4,4 @@ services:
     image: "ricardobchaves6/valar2"
     volumes:
       - /home/ricardo/projects/valar/xmls:/xmls
+      - /home/ricardo/projects/valar/xmls/dest:/dest
