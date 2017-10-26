@@ -1,0 +1,8 @@
+version: '3'
+services:
+  watchdog:
+    build: .
+    volumes:
+      - /home/ricardo/projects/valar/xmls:/xmls
+  redis:
+    image: "ricardobchaves6/testwatchdog"
