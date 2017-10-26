@@ -37,14 +37,17 @@ class MyHandler(PatternMatchingEventHandler):
         self.process(event)
 
 if __name__ == '__main__':
+    print('Iniciando')
     args = sys.argv[1:]
     observer = Observer()
     observer.schedule(MyHandler(), path=args[0] if args else '.')
+    print('observer.start()')
     observer.start()
 
     try:
         while True:
             time.sleep(1)
+            print('sleep')
     except KeyboardInterrupt:
         observer.stop()
 
